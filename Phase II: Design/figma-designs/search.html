@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Movies - MovieDB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">🎬</span>
+          <span class="logo-text">MovieDB</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="search.html" class="nav-link active">Discover</a>
+          <a href="watchlist.html" class="nav-link">Watchlist</a>
+        </nav>
+        <div class="header-actions">
+          <a href="search.html" class="icon-btn" title="Search">🔍</a>
+          <button
+            class="icon-btn theme-toggle"
+            id="themeToggle"
+            title="Toggle Theme"
+          >
+            🌙
+          </button>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="search.html" class="mobile-nav-link active">Discover</a>
+      <a href="watchlist.html" class="mobile-nav-link">Watchlist</a>
+    </nav>
+
+    <!-- Search Header -->
+    <section class="search-header">
+      <form class="search-bar-inline" action="search.html" method="GET">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          name="q"
+          class="search-input"
+          placeholder="Search for movies..."
+          value="Action"
+        />
+        <button type="button" class="clear-btn" id="clearSearch">✕</button>
+      </form>
+      <p class="search-results-count">
+        Showing <strong>248</strong> results for "<strong>Action</strong>"
+      </p>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="filter-bar">
+      <div class="filter-group">
+        <label for="genre">Genre</label>
+        <select id="genre" class="filter-select">
+          <option value="">All Genres</option>
+          <option value="28" selected>Action</option>
+          <option value="12">Adventure</option>
+          <option value="16">Animation</option>
+          <option value="35">Comedy</option>
+          <option value="80">Crime</option>
+          <option value="18">Drama</option>
+          <option value="14">Fantasy</option>
+          <option value="27">Horror</option>
+          <option value="10749">Romance</option>
+          <option value="878">Science Fiction</option>
+          <option value="53">Thriller</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="year">Year</label>
+        <select id="year" class="filter-select">
+          <option value="">All Years</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+          <option value="2010-2019">2010-2019</option>
+          <option value="2000-2009">2000-2009</option>
+          <option value="1990-1999">1990-1999</option>
+          <option value="older">Before 1990</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="sort">Sort By</label>
+        <select id="sort" class="filter-select">
+          <option value="popularity.desc">Popularity</option>
+          <option value="vote_average.desc">Rating</option>
+          <option value="release_date.desc">Release Date</option>
+          <option value="title.asc">Title (A-Z)</option>
+        </select>
+      </div>
+      <button class="reset-btn" id="resetFilters">Reset Filters</button>
+    </section>
+
+    <!-- Search Results Grid -->
+    <section class="results-section">
+      <div class="results-grid">
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+              alt="The Dark Knight"
+            />
+            <span class="rating-badge">⭐ 9.0</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">The Dark Knight</h3>
+            <p class="movie-meta">2008 • Action</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg"
+              alt="Gladiator II"
+            />
+            <span class="rating-badge">⭐ 7.8</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Gladiator II</h3>
+            <p class="movie-meta">2024 • Action</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg"
+              alt="Inception"
+            />
+            <span class="rating-badge">⭐ 8.8</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Inception</h3>
+            <p class="movie-meta">2010 • Action</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg"
+              alt="The Matrix"
+            />
+            <span class="rating-badge">⭐ 8.7</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">The Matrix</h3>
+            <p class="movie-meta">1999 • Action</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg"
+              alt="Dune: Part Two"
+            />
+            <span class="rating-badge">⭐ 8.8</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Dune: Part Two</h3>
+            <p class="movie-meta">2024 • Action</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/k42Owka8v91Fw3HpBLVmGGZFLgK.jpg"
+              alt="Venom: The Last Dance"
+            />
+            <span class="rating-badge">⭐ 6.5</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Venom: The Last Dance</h3>
+            <p class="movie-meta">2024 • Action</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/8riWcADI1ekEiBguVB9vkilhiQm.jpg"
+              alt="Mad Max: Fury Road"
+            />
+            <span class="rating-badge">⭐ 8.1</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Mad Max: Fury Road</h3>
+            <p class="movie-meta">2015 • Action</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg"
+              alt="Avengers: Endgame"
+            />
+            <span class="rating-badge">⭐ 8.4</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Avengers: Endgame</h3>
+            <p class="movie-meta">2019 • Action</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/ngl2FKBlU4fhbdsrtdom9LVLBXw.jpg"
+              alt="John Wick: Chapter 4"
+            />
+            <span class="rating-badge">⭐ 7.9</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">John Wick: Chapter 4</h3>
+            <p class="movie-meta">2023 • Action</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/6CoRTJTmijhBLJTUNoVSUNxZMEI.jpg"
+              alt="Top Gun: Maverick"
+            />
+            <span class="rating-badge">⭐ 8.3</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Top Gun: Maverick</h3>
+            <p class="movie-meta">2022 • Action</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg"
+              alt="Terminator 2"
+            />
+            <span class="rating-badge">⭐ 8.6</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Terminator 2</h3>
+            <p class="movie-meta">1991 • Action</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg"
+              alt="Mission: Impossible"
+            />
+            <span class="rating-badge">⭐ 7.8</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Mission: Impossible</h3>
+            <p class="movie-meta">2023 • Action</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Pagination -->
+    <section class="pagination">
+      <button class="page-btn" disabled>← Previous</button>
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <button class="page-btn">4</button>
+      <button class="page-btn">5</button>
+      <span class="page-dots">...</span>
+      <button class="page-btn">21</button>
+      <button class="page-btn">Next →</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-icon">🎬</span>
+            <span class="logo-text">MovieDB</span>
+          </div>
+          <p class="footer-desc">
+            Your ultimate destination for discovering movies, building
+            watchlists, and exploring the world of cinema.
+          </p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <a href="search.html?category=trending">Trending</a>
+            <a href="search.html?category=top-rated">Top Rated</a>
+            <a href="search.html?category=upcoming">Upcoming</a>
+            <a href="search.html?category=now-playing">Now Playing</a>
+          </div>
+          <div class="footer-col">
+            <h4>Account</h4>
+            <a href="watchlist.html">My Watchlist</a>
+            <a href="#">Settings</a>
+          </div>
+          <div class="footer-col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2025 MovieDB. Made with ❤️ by Christian GUHIRWA. Data provided by
+          TMDB.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

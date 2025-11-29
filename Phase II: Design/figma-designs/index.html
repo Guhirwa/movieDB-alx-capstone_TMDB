@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieDB - Discover Your Next Favorite Movie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">🎬</span>
+          <span class="logo-text">MovieDB</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="search.html" class="nav-link">Discover</a>
+          <a href="watchlist.html" class="nav-link">Watchlist</a>
+        </nav>
+        <div class="header-actions">
+          <a href="search.html" class="icon-btn" title="Search">🔍</a>
+          <button
+            class="icon-btn theme-toggle"
+            id="themeToggle"
+            title="Toggle Theme"
+          >
+            🌙
+          </button>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html" class="mobile-nav-link active">Home</a>
+      <a href="search.html" class="mobile-nav-link">Discover</a>
+      <a href="watchlist.html" class="mobile-nav-link">Watchlist</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Discover Your Next Favorite Movie</h1>
+        <p class="hero-subtitle">
+          Explore millions of movies, create your watchlist, and find your next
+          binge-worthy film.
+        </p>
+        <form class="search-bar-large" action="search.html" method="GET">
+          <span class="search-icon">🔍</span>
+          <input
+            type="text"
+            name="q"
+            class="search-input"
+            placeholder="Search for movies, actors, genres..."
+          />
+          <button type="submit" class="search-button">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Trending Movies -->
+    <section class="movie-section">
+      <div class="section-header">
+        <h2 class="section-title">🔥 Trending Now</h2>
+        <a href="search.html?category=trending" class="view-all">View All →</a>
+      </div>
+      <div class="movie-row">
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg"
+              alt="Oppenheimer"
+            />
+            <span class="rating-badge">⭐ 8.5</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Oppenheimer</h3>
+            <p class="movie-meta">2023 • Drama</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+              alt="The Dark Knight"
+            />
+            <span class="rating-badge">⭐ 9.0</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">The Dark Knight</h3>
+            <p class="movie-meta">2008 • Action</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg"
+              alt="Dune: Part Two"
+            />
+            <span class="rating-badge">⭐ 8.8</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Dune: Part Two</h3>
+            <p class="movie-meta">2024 • Sci-Fi</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg"
+              alt="Inception"
+            />
+            <span class="rating-badge">⭐ 8.8</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Inception</h3>
+            <p class="movie-meta">2010 • Sci-Fi</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+              alt="Interstellar"
+            />
+            <span class="rating-badge">⭐ 8.7</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Interstellar</h3>
+            <p class="movie-meta">2014 • Sci-Fi</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg"
+              alt="The Matrix"
+            />
+            <span class="rating-badge">⭐ 8.7</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">The Matrix</h3>
+            <p class="movie-meta">1999 • Sci-Fi</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Top Rated Movies -->
+    <section class="movie-section alt-bg">
+      <div class="section-header">
+        <h2 class="section-title">⭐ Top Rated</h2>
+        <a href="search.html?category=top-rated" class="view-all">View All →</a>
+      </div>
+      <div class="movie-row">
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg"
+              alt="The Shawshank Redemption"
+            />
+            <span class="rating-badge">⭐ 9.3</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">The Shawshank Redemption</h3>
+            <p class="movie-meta">1994 • Drama</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg"
+              alt="The Godfather"
+            />
+            <span class="rating-badge">⭐ 9.2</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">The Godfather</h3>
+            <p class="movie-meta">1972 • Crime</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg"
+              alt="Schindler's List"
+            />
+            <span class="rating-badge">⭐ 9.0</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Schindler's List</h3>
+            <p class="movie-meta">1993 • History</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/velWPhVMQeQKcxggNEU8YmIo52R.jpg"
+              alt="Spirited Away"
+            />
+            <span class="rating-badge">⭐ 8.6</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Spirited Away</h3>
+            <p class="movie-meta">2001 • Animation</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg"
+              alt="Forrest Gump"
+            />
+            <span class="rating-badge">⭐ 8.8</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Forrest Gump</h3>
+            <p class="movie-meta">1994 • Drama</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg"
+              alt="The Lord of the Rings"
+            />
+            <span class="rating-badge">⭐ 9.0</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">The Lord of the Rings</h3>
+            <p class="movie-meta">2001 • Fantasy</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Now Playing -->
+    <section class="movie-section">
+      <div class="section-header">
+        <h2 class="section-title">🎬 Now Playing</h2>
+        <a href="search.html?category=now-playing" class="view-all"
+          >View All →</a
+        >
+      </div>
+      <div class="movie-row">
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg"
+              alt="Gladiator II"
+            />
+            <span class="rating-badge">⭐ 7.8</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Gladiator II</h3>
+            <p class="movie-meta">2024 • Action</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/aosm8NMQ3UyoBVpSxyimorCQykC.jpg"
+              alt="Moana 2"
+            />
+            <span class="rating-badge">⭐ 7.5</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Moana 2</h3>
+            <p class="movie-meta">2024 • Animation</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/xDGbZ0JJ3mYaGKy4Nzd9Kph6M9L.jpg"
+              alt="Wicked"
+            />
+            <span class="rating-badge">⭐ 8.0</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Wicked</h3>
+            <p class="movie-meta">2024 • Musical</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/oGythE98MYleE6mZlGs5oBGkux1.jpg"
+              alt="Red One"
+            />
+            <span class="rating-badge">⭐ 6.9</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Red One</h3>
+            <p class="movie-meta">2024 • Comedy</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/k42Owka8v91Fw3HpBLVmGGZFLgK.jpg"
+              alt="Venom: The Last Dance"
+            />
+            <span class="rating-badge">⭐ 6.5</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Venom: The Last Dance</h3>
+            <p class="movie-meta">2024 • Action</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/aE85MnPIsSoSs3978Noo16BRsKN.jpg"
+              alt="Smile 2"
+            />
+            <span class="rating-badge">⭐ 6.8</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Smile 2</h3>
+            <p class="movie-meta">2024 • Horror</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-icon">🎬</span>
+            <span class="logo-text">MovieDB</span>
+          </div>
+          <p class="footer-desc">
+            Your ultimate destination for discovering movies, building
+            watchlists, and exploring the world of cinema.
+          </p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <a href="search.html?category=trending">Trending</a>
+            <a href="search.html?category=top-rated">Top Rated</a>
+            <a href="search.html?category=upcoming">Upcoming</a>
+            <a href="search.html?category=now-playing">Now Playing</a>
+          </div>
+          <div class="footer-col">
+            <h4>Account</h4>
+            <a href="watchlist.html">My Watchlist</a>
+            <a href="#">Settings</a>
+          </div>
+          <div class="footer-col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2025 MovieDB. Made with ❤️ by Christian GUHIRWA. Data provided by
+          TMDB.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

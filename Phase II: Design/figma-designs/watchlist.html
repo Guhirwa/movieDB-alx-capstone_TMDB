@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Watchlist - MovieDB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">🎬</span>
+          <span class="logo-text">MovieDB</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="search.html" class="nav-link">Discover</a>
+          <a href="watchlist.html" class="nav-link active">Watchlist</a>
+        </nav>
+        <div class="header-actions">
+          <a href="search.html" class="icon-btn" title="Search">🔍</a>
+          <button
+            class="icon-btn theme-toggle"
+            id="themeToggle"
+            title="Toggle Theme"
+          >
+            🌙
+          </button>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="search.html" class="mobile-nav-link">Discover</a>
+      <a href="watchlist.html" class="mobile-nav-link active">Watchlist</a>
+    </nav>
+
+    <!-- Watchlist Header -->
+    <section class="page-header">
+      <div class="page-header-content">
+        <h1 class="page-title">📋 My Watchlist</h1>
+        <p class="page-subtitle">
+          You have <strong>6</strong> movies saved to watch later
+        </p>
+      </div>
+    </section>
+
+    <!-- Watchlist Grid -->
+    <section class="watchlist-section">
+      <div class="watchlist-grid">
+        <div class="watchlist-card">
+          <a href="movie.html" class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg"
+              alt="Oppenheimer"
+            />
+            <span class="rating-badge">⭐ 8.5</span>
+          </a>
+          <div class="watchlist-info">
+            <a href="movie.html" class="movie-title">Oppenheimer</a>
+            <p class="movie-meta">2023 • Drama, History</p>
+            <p class="movie-overview">
+              The story of American scientist J. Robert Oppenheimer and his role
+              in the development of the atomic bomb.
+            </p>
+            <div class="watchlist-actions">
+              <button class="btn-small btn-primary">▶ Watch Trailer</button>
+              <button class="btn-small btn-danger">🗑 Remove</button>
+            </div>
+          </div>
+        </div>
+        <div class="watchlist-card">
+          <a href="movie.html" class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg"
+              alt="Dune: Part Two"
+            />
+            <span class="rating-badge">⭐ 8.8</span>
+          </a>
+          <div class="watchlist-info">
+            <a href="movie.html" class="movie-title">Dune: Part Two</a>
+            <p class="movie-meta">2024 • Sci-Fi, Adventure</p>
+            <p class="movie-overview">
+              Paul Atreides unites with Chani and the Fremen while seeking
+              revenge against the conspirators who destroyed his family.
+            </p>
+            <div class="watchlist-actions">
+              <button class="btn-small btn-primary">▶ Watch Trailer</button>
+              <button class="btn-small btn-danger">🗑 Remove</button>
+            </div>
+          </div>
+        </div>
+        <div class="watchlist-card">
+          <a href="movie.html" class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+              alt="Interstellar"
+            />
+            <span class="rating-badge">⭐ 8.7</span>
+          </a>
+          <div class="watchlist-info">
+            <a href="movie.html" class="movie-title">Interstellar</a>
+            <p class="movie-meta">2014 • Sci-Fi, Drama</p>
+            <p class="movie-overview">
+              A team of explorers travel through a wormhole in space in an
+              attempt to ensure humanity's survival.
+            </p>
+            <div class="watchlist-actions">
+              <button class="btn-small btn-primary">▶ Watch Trailer</button>
+              <button class="btn-small btn-danger">🗑 Remove</button>
+            </div>
+          </div>
+        </div>
+        <div class="watchlist-card">
+          <a href="movie.html" class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg"
+              alt="Gladiator II"
+            />
+            <span class="rating-badge">⭐ 7.8</span>
+          </a>
+          <div class="watchlist-info">
+            <a href="movie.html" class="movie-title">Gladiator II</a>
+            <p class="movie-meta">2024 • Action, Drama</p>
+            <p class="movie-overview">
+              Years after witnessing the death of Maximus, Lucius must enter the
+              Colosseum and look to the past to find strength.
+            </p>
+            <div class="watchlist-actions">
+              <button class="btn-small btn-primary">▶ Watch Trailer</button>
+              <button class="btn-small btn-danger">🗑 Remove</button>
+            </div>
+          </div>
+        </div>
+        <div class="watchlist-card">
+          <a href="movie.html" class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg"
+              alt="The Shawshank Redemption"
+            />
+            <span class="rating-badge">⭐ 9.3</span>
+          </a>
+          <div class="watchlist-info">
+            <a href="movie.html" class="movie-title"
+              >The Shawshank Redemption</a
+            >
+            <p class="movie-meta">1994 • Drama</p>
+            <p class="movie-overview">
+              Two imprisoned men bond over a number of years, finding solace and
+              eventual redemption through acts of common decency.
+            </p>
+            <div class="watchlist-actions">
+              <button class="btn-small btn-primary">▶ Watch Trailer</button>
+              <button class="btn-small btn-danger">🗑 Remove</button>
+            </div>
+          </div>
+        </div>
+        <div class="watchlist-card">
+          <a href="movie.html" class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/xDGbZ0JJ3mYaGKy4Nzd9Kph6M9L.jpg"
+              alt="Wicked"
+            />
+            <span class="rating-badge">⭐ 8.0</span>
+          </a>
+          <div class="watchlist-info">
+            <a href="movie.html" class="movie-title">Wicked</a>
+            <p class="movie-meta">2024 • Musical, Fantasy</p>
+            <p class="movie-overview">
+              The story of how a green-skinned woman becomes the Wicked Witch of
+              the West and her friendship with Glinda.
+            </p>
+            <div class="watchlist-actions">
+              <button class="btn-small btn-primary">▶ Watch Trailer</button>
+              <button class="btn-small btn-danger">🗑 Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Empty State (hidden by default) -->
+    <section class="empty-state" style="display: none">
+      <div class="empty-content">
+        <span class="empty-icon">📭</span>
+        <h2>Your watchlist is empty</h2>
+        <p>Start adding movies you want to watch later!</p>
+        <a href="search.html" class="btn-primary">Discover Movies</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-icon">🎬</span>
+            <span class="logo-text">MovieDB</span>
+          </div>
+          <p class="footer-desc">
+            Your ultimate destination for discovering movies, building
+            watchlists, and exploring the world of cinema.
+          </p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <a href="search.html?category=trending">Trending</a>
+            <a href="search.html?category=top-rated">Top Rated</a>
+            <a href="search.html?category=upcoming">Upcoming</a>
+            <a href="search.html?category=now-playing">Now Playing</a>
+          </div>
+          <div class="footer-col">
+            <h4>Account</h4>
+            <a href="watchlist.html">My Watchlist</a>
+            <a href="#">Settings</a>
+          </div>
+          <div class="footer-col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2025 MovieDB. Made with ❤️ by Christian GUHIRWA. Data provided by
+          TMDB.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

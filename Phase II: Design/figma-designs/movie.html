@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oppenheimer - MovieDB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">🎬</span>
+          <span class="logo-text">MovieDB</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="search.html" class="nav-link">Discover</a>
+          <a href="watchlist.html" class="nav-link">Watchlist</a>
+        </nav>
+        <div class="header-actions">
+          <a href="search.html" class="icon-btn" title="Search">🔍</a>
+          <button
+            class="icon-btn theme-toggle"
+            id="themeToggle"
+            title="Toggle Theme"
+          >
+            🌙
+          </button>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="search.html" class="mobile-nav-link">Discover</a>
+      <a href="watchlist.html" class="mobile-nav-link">Watchlist</a>
+    </nav>
+
+    <!-- Movie Hero Section -->
+    <section
+      class="movie-hero"
+      style="
+        background-image: url('https://image.tmdb.org/t/p/original/nb3xI8XI3w4pMVZ38VijbsyBqP4.jpg');
+      "
+    >
+      <div class="movie-hero-overlay">
+        <div class="movie-hero-content">
+          <div class="movie-poster-large">
+            <img
+              src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg"
+              alt="Oppenheimer"
+            />
+          </div>
+          <div class="movie-details">
+            <h1 class="movie-details-title">
+              Oppenheimer <span class="year">(2023)</span>
+            </h1>
+            <div class="movie-meta-line">
+              <span class="rating-large">⭐ 8.5/10</span>
+              <span class="separator">•</span>
+              <span>3h 0m</span>
+              <span class="separator">•</span>
+              <span>R</span>
+            </div>
+            <div class="genre-tags">
+              <span class="genre-tag">Drama</span>
+              <span class="genre-tag">History</span>
+              <span class="genre-tag">Thriller</span>
+            </div>
+            <p class="tagline">"The world forever changes."</p>
+            <div class="action-buttons">
+              <button class="btn-primary" id="watchTrailer">
+                ▶ Watch Trailer
+              </button>
+              <button class="btn-secondary" id="addToWatchlist">
+                + Add to Watchlist
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="content-section">
+      <h2 class="content-title">Overview</h2>
+      <p class="overview-text">
+        The story of American scientist J. Robert Oppenheimer and his role in
+        the development of the atomic bomb. Based on the Pulitzer Prize-winning
+        book "American Prometheus" by Kai Bird and Martin J. Sherwin, the film
+        chronicles Oppenheimer's journey from a brilliant young physicist to the
+        leader of the Manhattan Project, and the moral complexities he faced as
+        the "father of the atomic bomb."
+      </p>
+    </section>
+
+    <!-- Movie Info Grid -->
+    <section class="content-section alt-bg">
+      <h2 class="content-title">Details</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <span class="info-label">Director</span>
+          <span class="info-value">Christopher Nolan</span>
+        </div>
+        <div class="info-card">
+          <span class="info-label">Release Date</span>
+          <span class="info-value">July 21, 2023</span>
+        </div>
+        <div class="info-card">
+          <span class="info-label">Budget</span>
+          <span class="info-value">$100,000,000</span>
+        </div>
+        <div class="info-card">
+          <span class="info-label">Revenue</span>
+          <span class="info-value">$952,000,000</span>
+        </div>
+        <div class="info-card">
+          <span class="info-label">Status</span>
+          <span class="info-value">Released</span>
+        </div>
+        <div class="info-card">
+          <span class="info-label">Language</span>
+          <span class="info-value">English</span>
+        </div>
+        <div class="info-card">
+          <span class="info-label">Production</span>
+          <span class="info-value">Universal Pictures</span>
+        </div>
+        <div class="info-card">
+          <span class="info-label">Country</span>
+          <span class="info-value">United States</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cast Section -->
+    <section class="content-section">
+      <h2 class="content-title">Top Billed Cast</h2>
+      <div class="cast-row">
+        <div class="cast-card">
+          <img
+            src="https://image.tmdb.org/t/p/w185/llkbyWKwpfowZ6C8peBjIV9jj99.jpg"
+            alt="Cillian Murphy"
+            class="cast-photo"
+          />
+          <p class="cast-name">Cillian Murphy</p>
+          <p class="cast-character">J. Robert Oppenheimer</p>
+        </div>
+        <div class="cast-card">
+          <img
+            src="https://image.tmdb.org/t/p/w185/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg"
+            alt="Emily Blunt"
+            class="cast-photo"
+          />
+          <p class="cast-name">Emily Blunt</p>
+          <p class="cast-character">Kitty Oppenheimer</p>
+        </div>
+        <div class="cast-card">
+          <img
+            src="https://image.tmdb.org/t/p/w185/tJiSUYst4ddIaz1zge2LqCtu9tw.jpg"
+            alt="Matt Damon"
+            class="cast-photo"
+          />
+          <p class="cast-name">Matt Damon</p>
+          <p class="cast-character">Leslie Groves</p>
+        </div>
+        <div class="cast-card">
+          <img
+            src="https://image.tmdb.org/t/p/w185/dv5GPmNgH4f9rxv0NuNmFUjMKkH.jpg"
+            alt="Robert Downey Jr."
+            class="cast-photo"
+          />
+          <p class="cast-name">Robert Downey Jr.</p>
+          <p class="cast-character">Lewis Strauss</p>
+        </div>
+        <div class="cast-card">
+          <img
+            src="https://image.tmdb.org/t/p/w185/sTenl4iJSzR9bgjp96gAnPnXqci.jpg"
+            alt="Florence Pugh"
+            class="cast-photo"
+          />
+          <p class="cast-name">Florence Pugh</p>
+          <p class="cast-character">Jean Tatlock</p>
+        </div>
+        <div class="cast-card">
+          <img
+            src="https://image.tmdb.org/t/p/w185/oTB9vGIBFWzNuA4z74JO8k5MmFU.jpg"
+            alt="Josh Hartnett"
+            class="cast-photo"
+          />
+          <p class="cast-name">Josh Hartnett</p>
+          <p class="cast-character">Ernest Lawrence</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Similar Movies -->
+    <section class="movie-section alt-bg">
+      <div class="section-header">
+        <h2 class="section-title">Similar Movies</h2>
+        <a href="search.html" class="view-all">View All →</a>
+      </div>
+      <div class="movie-row">
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg"
+              alt="Inception"
+            />
+            <span class="rating-badge">⭐ 8.8</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Inception</h3>
+            <p class="movie-meta">2010 • Sci-Fi</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+              alt="Interstellar"
+            />
+            <span class="rating-badge">⭐ 8.7</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Interstellar</h3>
+            <p class="movie-meta">2014 • Sci-Fi</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+              alt="The Dark Knight"
+            />
+            <span class="rating-badge">⭐ 9.0</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">The Dark Knight</h3>
+            <p class="movie-meta">2008 • Action</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg"
+              alt="Dune: Part Two"
+            />
+            <span class="rating-badge">⭐ 8.8</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Dune: Part Two</h3>
+            <p class="movie-meta">2024 • Sci-Fi</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg"
+              alt="Schindler's List"
+            />
+            <span class="rating-badge">⭐ 9.0</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">Schindler's List</h3>
+            <p class="movie-meta">1993 • History</p>
+          </div>
+        </a>
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg"
+              alt="The Matrix"
+            />
+            <span class="rating-badge">⭐ 8.7</span>
+          </div>
+          <div class="movie-info">
+            <h3 class="movie-title">The Matrix</h3>
+            <p class="movie-meta">1999 • Sci-Fi</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-icon">🎬</span>
+            <span class="logo-text">MovieDB</span>
+          </div>
+          <p class="footer-desc">
+            Your ultimate destination for discovering movies, building
+            watchlists, and exploring the world of cinema.
+          </p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <a href="search.html?category=trending">Trending</a>
+            <a href="search.html?category=top-rated">Top Rated</a>
+            <a href="search.html?category=upcoming">Upcoming</a>
+            <a href="search.html?category=now-playing">Now Playing</a>
+          </div>
+          <div class="footer-col">
+            <h4>Account</h4>
+            <a href="watchlist.html">My Watchlist</a>
+            <a href="#">Settings</a>
+          </div>
+          <div class="footer-col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2025 MovieDB. Made with ❤️ by Christian GUHIRWA. Data provided by
+          TMDB.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Trailer Modal -->
+    <div class="modal" id="trailerModal">
+      <div class="modal-content">
+        <button class="modal-close" id="closeModal">✕</button>
+        <div class="video-container">
+          <iframe
+            id="trailerFrame"
+            src=""
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
